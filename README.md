@@ -74,6 +74,6 @@ ou
 
 ## Testar envio de email
 
-Rota: http://localhost:5000/test/send-email
-Método: POST
-Body: Não é necessário enviar nada no corpo da requisição.
+- Rota: http://localhost:5000/test/send-email
+- Método: POST
+- Body: Não é necessário enviar nada no corpo da requisição.
