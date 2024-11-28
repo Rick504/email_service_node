@@ -76,4 +76,15 @@ ou
 
 - Rota: http://localhost:5000/test/send-email
 - Método: POST
-- Body: Não é necessário enviar nada no corpo da requisição.
+- Body:
+
+```
+  {
+    "to": "rick.wes1@gmail.com",
+    "subject": "Teste Titulo do E-mail",
+    "text": "Este é um e-mail de teste enviado pelo Nodemailer!",
+    "template": "emailTemplate1"
+  }
+```
+
+template voce define o template html usado para o email.

@@ -11,17 +11,19 @@ router.get('/', (req: Request, res: Response) => {
 
 const sendEmailHandler: RequestHandler = async (req: Request, res: Response): Promise<void> => {
 
-  const templatePath = path.join(__dirname, '../templates/emailTemplate.html');
+  const { to, subject, text, template } = req.body;
+
+  const templatePath = path.join(__dirname, `../templates/${template}.html`);
   const htmlContent = fs.readFileSync(templatePath, 'utf8');
 
   let dataEmail = {
-    to: "rick.wes1@gmail.com",
-    subject: "Teste Titulo do E-mail",
-    text: "Este é um e-mail de teste enviado pelo Nodemailer!",
+    to: to,
+    subject: subject,
+    text: text,
     html: htmlContent
   }
 
-  if (!dataEmail) {
+  if (!to || !subject || !text || !template) {
     res.status(400).json({ mensagem: 'Faltando parâmetros para o envio de e-mail!' });
     return;
   }
