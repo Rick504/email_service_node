@@ -1,6 +1,8 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
+import { config } from '../config/index';
+import { texts } from './utils/textLogs';
 
 // Routers
 import routes from './routers';
@@ -25,14 +27,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(
-  cors({
-    origin: `http://localhost:${process.env.PORT}`,
-  })
-);
+app.use(cors({ origin: texts.localhost }));
 
-app.listen(process.env.PORT, () => {
-  console.log(
-    `O aplicativo está sendo executado na porta ${process.env.PORT} !`
-  );
+app.listen(config.port, () => {
+   console.log(texts.start_server);
 });
