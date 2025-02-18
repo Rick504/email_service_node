@@ -74,7 +74,7 @@ ou
 
 ## Testar envio de email
 
-- Rota: http://localhost:5000/test/send-email
+- Rota: http://localhost:5000/send-email
 - Método: POST
 - Body:
 

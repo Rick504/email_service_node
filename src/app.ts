@@ -1,16 +1,15 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import { config } from '../config/index';
+import { config } from './config/index';
 import { texts } from './utils/textLogs';
 
+dotenv.config();
 // Routers
 import routes from './routers';
 
-dotenv.config();
 const app = express();
 app.use(express.json());
-
 app.use('/', routes);
 
 // Rota principal
