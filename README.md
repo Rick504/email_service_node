@@ -83,7 +83,10 @@ ou
     "to": "rick.wes1@gmail.com",
     "subject": "Teste Titulo do E-mail",
     "text": "Este é um e-mail de teste enviado pelo Nodemailer!",
-    "template": "emailTemplate1"
+    "template": "emailTemplate1",
+    "data": {
+			"nome": "João"
+		}
   }
 ```
 

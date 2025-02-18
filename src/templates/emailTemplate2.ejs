@@ -32,9 +32,11 @@
 <body>
     <div class="header">Título do E-mail 2</div>
     <div class="content">
-        <p>Este é o corpo do e-mail de teste 2 enviado pelo Nodemailer!</p>
+        <p> Olá <%= nome %>, Este é o corpo do e-mail de teste 2 enviado pelo Nodemailer!</p>
     </div>
-    <div class="footer">© 2024 Rick Wesley Rios</div>
+    <footer class="footer">
+        <p>&copy; <%= new Date().getFullYear() %> - Todos os direitos reservados.</p>
+    </footer>
 </body>
 
 </html>
