@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperação de Senha</title>
+</head>
+
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
+    <table align="center" width="100%"
+        style="max-width: 600px; background-color: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+        <tr>
+            <td style="text-align: center;">
+                <h2 style="color: #333;">Recuperação de Senha</h2>
+                <p style="color: #666;">Olá,</p>
+                <p style="color: #666;">
+                    Recebemos uma solicitação para redefinir a senha da sua conta. Se você não fez essa solicitação, ignore este e-mail.
+                </p>
+                <p style="color: #666;">Para redefinir sua senha, clique no botão abaixo:</p>
+                <a href="<%= link %>"
+                    style="background-color: #28a745; color: #ffffff; padding: 12px 20px; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold;">
+                    Redefinir Senha
+                </a>
+                <p style="color: #666; margin-top: 20px;">Se o botão não funcionar, copie e cole o seguinte link no seu
+                    navegador:</p>
+                <p style="color: #28a745; font-weight: bold;">
+                    <%= link %>
+                </p>
+                <hr style="margin: 20px 0; border: none; border-top: 1px solid #ddd;">
+                <p style="color: #666;">Atenciosamente,<br><strong>Equipe [Nome da Empresa]</strong></p>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

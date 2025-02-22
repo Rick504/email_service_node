@@ -22,6 +22,7 @@ export const sendEmail = async (options: EmailOptions) => {
       html,
     });
     console.log('E-mail enviado: ', info.messageId);
+    if (info.messageId) return true
   } catch (error) {
     console.error('Erro ao enviar e-mail: ', error);
   }
