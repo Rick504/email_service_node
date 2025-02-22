@@ -3,16 +3,12 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import { config } from './config/index';
 import { texts } from './utils/textLogs';
+import routes from './routers';
 
 dotenv.config();
-import routes from './routers';
 
 const app = express();
 app.use(express.json());
-
-app.get('/', (req, res) => {
-  res.json({ mensagem: 'Bem-vindo ao backend em node!' })
-});
 
 app.use(
   cors({
