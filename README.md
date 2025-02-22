@@ -29,6 +29,7 @@ Antes de começar, você precisará de:
 
    ```bash
    PORT=5000
+   CLIENT_ORIGIN=clientequeenviaoemail
 
    EMAIL_HOST=smtp_do_provedor
    EMAIL_PORT=465
