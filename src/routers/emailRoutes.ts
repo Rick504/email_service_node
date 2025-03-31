@@ -9,6 +9,10 @@ router.get('/', (req: Request, res: Response) => {
   res.json({ mensagem: 'Serviço de emails no ar!' });
 });
 
+router.get('/test-router', (req: Request, res: Response) => {
+  res.json({ mensagem: 'Testando rotas' });
+});
+
 router.post('/send-email-test', sendEmailHandler);
 router.post('/send-refrash-password', sendRefrashPassword);
 router.post('/send-active-account', sendActiveEmailAccount); ;
