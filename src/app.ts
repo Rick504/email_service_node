@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: config.client,
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type', 'Authorization', 'x-access-token'],
     credentials: true,
   })
